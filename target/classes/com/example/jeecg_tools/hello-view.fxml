@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="643.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jeecg_tools.HelloController">
+   <children>
+      <TitledPane layoutY="24.0" prefHeight="115.0" prefWidth="804.0" text="漏洞检测">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="85.0" prefWidth="802.0">
+               <children>
+                  <TextArea fx:id="URL_" layoutX="64.0" layoutY="13.0" minHeight="-Infinity" prefHeight="29.0" prefWidth="379.0" text="http://192.168.43.54:8080/jeecg" />
+               
+                                              <Label layoutX="8.0" layoutY="19.0" prefHeight="17.0" prefWidth="43.0" text="URL：" />
+                   <Button fx:id="Vulcheck_" layoutX="632.0" layoutY="14.0" onMousePressed="#VulCheck" text="漏洞检测" textAlignment="RIGHT">
+                     <opaqueInsets>
+                        <Insets left="20.0" />
+                     </opaqueInsets>
+                  </Button>
+                  <Button fx:id="Clean_" layoutX="711.0" layoutY="14.0" mnemonicParsing="false" onMousePressed="#onCleanlog" text="清空日志" />
+                  <ComboBox fx:id="comboBox" layoutX="458.0" layoutY="14.0" prefWidth="150.0" />
+                  <Label layoutX="8.0" layoutY="56.0" prefHeight="17.0" prefWidth="58.0" text="请求头：" wrapText="true" />
+                  <TextArea fx:id="HEAD_" layoutX="64.0" layoutY="50.0" minHeight="-Infinity" prefHeight="29.0" prefWidth="545.0" text="Cookie: JSESSIONID=4542BAB4C4C024F42DA05EC85186AE4D;" wrapText="true" />
+                  <CheckBox fx:id="CheckHEAD_" layoutX="626.0" layoutY="56.0" mnemonicParsing="false" text="使用请求头" />
+
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane layoutY="139.0" prefHeight="506.0" prefWidth="804.0" text="漏洞利用">
+         <content>
+            <TabPane prefHeight="481.0" prefWidth="802.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="基本信息">
+                     <content>
+                        <AnchorPane prefHeight="448.0" prefWidth="802.0">
+                           <children>
+                              <TextArea fx:id="INFO_" layoutX="9.0" layoutY="14.0" prefHeight="428.0" prefWidth="785.0" text="&#10;工具说明：本工具为jeecg框架漏洞利用工具非jeecg-boot！" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                <Tab text="文件上传">
+                     <content>
+                        <AnchorPane prefHeight="414.0" prefWidth="802.0">
+                           <children>
+                              <Text layoutX="14.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="文件名称：" wrappingWidth="76.3837890625" />
+                              <TextArea fx:id="FileName_" layoutX="90.0" layoutY="15.0" minHeight="-Infinity" prefHeight="29.0" prefWidth="354.0" text="test.jsp" />
+                              <Button fx:id="FileUpload_" layoutX="464.0" layoutY="16.0" mnemonicParsing="false" onMousePressed="#FileUpload" text="Upload" />
+                              <TextArea fx:id="FileContent_" layoutX="9.0" layoutY="53.0" prefHeight="230.0" prefWidth="785.0" text="&lt;% out.println(&quot;HelloWorld&quot;);%&gt;" wrapText="true" />
+                              <TextArea fx:id="OutPath_" layoutX="9.0" layoutY="290.0" prefHeight="152.0" prefWidth="785.0" />
+                           </children>
+                        </AnchorPane>
+                     </content></Tab>
+                  <Tab text="Xstream内存马">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Text layoutX="14.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="文件名称：" />
+                              <TextArea fx:id="XsFilename_" layoutX="90.0" layoutY="15.0" minHeight="-Infinity" prefHeight="29.0" prefWidth="354.0" />
+                              <Button fx:id="Inject_" layoutX="469.0" layoutY="17.0" mnemonicParsing="false" onMousePressed="#Inject" text="Inject" />
+                              <TextArea fx:id="XsContent_" layoutX="9.0" layoutY="53.0" prefHeight="230.0" prefWidth="785.0" text="JMG工具生成Tomcat-Filter-BASE64-专项JDK_AbstractTranslet内存马Payload &#10;&#10;yv66vgAAADEBtAEAJW9yZy9zc......" wrapText="true" />
+                              <TextArea fx:id="XsXsOut_" layoutX="9.0" layoutY="290.0" prefHeight="152.0" prefWidth="785.0" text="说明：&#10;jeecg Xstream反序列化漏洞通过文件上传触发&#10;&#10;注意：后缀名必须为.zip 且不可重复，否则可能会加载之前的payload" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </content>
+      </TitledPane>
+      <MenuBar layoutY="-2.0" prefHeight="19.0" prefWidth="804.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="代理">
+            <items>
+              <MenuItem mnemonicParsing="false" text="还没写～" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="关于">
+            <items>
+              <MenuItem mnemonicParsing="false" text="也没有～" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

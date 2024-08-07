@@ -19,14 +19,16 @@
 ```shell
 java -jar Jeecg_Tools-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
-
+![image-20240807235234773](https://raw.githubusercontent.com/K-7H7l/Jeecg_Tools/main/sc_20240808001746.png)
 
 
 ## 参考
 
 [ThinkphpGUI](https://github.com/Lotus6/ThinkphpGUI)
-[](https://mp.weixin.qq.com/s/kLJLXc_tn1mrClweaX2bkw)
-[](https://mp.weixin.qq.com/s/mV4GNI9O4a1pT3ve3Mt75Q)
+
+https://mp.weixin.qq.com/s/kLJLXc_tn1mrClweaX2bkw
+
+https://mp.weixin.qq.com/s/mV4GNI9O4a1pT3ve3Mt75Q
 
 
 

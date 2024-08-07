@@ -20,13 +20,13 @@
 java -jar Jeecg_Tools-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 
-![image-20240807235234773](../../Library/Application Support/typora-user-images/image-20240807235234773.png)
+
 
 ## 参考
 
-[ThinkphpGUI]: https://github.com/Lotus6/ThinkphpGUI
-[]: https://mp.weixin.qq.com/s/kLJLXc_tn1mrClweaX2bkw
-[]: https://mp.weixin.qq.com/s/mV4GNI9O4a1pT3ve3Mt75Q
+[ThinkphpGUI](https://github.com/Lotus6/ThinkphpGUI)
+[](https://mp.weixin.qq.com/s/kLJLXc_tn1mrClweaX2bkw)
+[](https://mp.weixin.qq.com/s/mV4GNI9O4a1pT3ve3Mt75Q)
 
 
 

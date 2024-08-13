@@ -1,9 +1,11 @@
 com/example/jeecg_tools/entity/Result.class
 com/example/jeecg_tools/exploit/JEECG_commonUpload.class
+com/example/jeecg_tools/exploit/JEECG_jeecgFormDemo.class
 com/example/jeecg_tools/exploit/JEECG_XstreamInject.class
 com/example/jeecg_tools/HelloApplication.class
 com/example/jeecg_tools/exploit/JEECG_iconUpload.class
 com/example/jeecg_tools/util/Tools.class
+com/example/jeecg_tools/MainRunner.class
 com/example/jeecg_tools/common/BasePayload.class
 com/example/jeecg_tools/util/ExppList.class
 com/example/jeecg_tools/HelloController.class

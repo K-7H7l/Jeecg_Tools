@@ -14,10 +14,10 @@
 
 ## 使用
 
-**运行于jdk11环境**
+**运行于jdk8环境**
 
 ```shell
-java -jar Jeecg_Tools-1.0-SNAPSHOT-jar-with-dependencies.jar
+java -jar Jeecg_Tools-1.0-java8.jar
 ```
 ![image-20240807235234773](https://raw.githubusercontent.com/K-7H7l/Jeecg_Tools/main/sc_20240808001746.png)
 
